@@ -6,7 +6,9 @@ defmodule Daze.Application do
   use Application
 
   def start(_type, _args) do
-    children = []
+    children = [
+      {Plug.Adapters.Cowboy, scheme: :http, plug: Daze.Router, options: [port: 4001]}
+    ]
 
     opts = [strategy: :one_for_one, name: Daze.Supervisor]
     Supervisor.start_link(children, opts)
