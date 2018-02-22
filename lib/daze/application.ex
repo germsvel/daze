@@ -7,7 +7,8 @@ defmodule Daze.Application do
 
   def start(_type, _args) do
     children = [
-      {Plug.Adapters.Cowboy, scheme: :http, plug: Daze.Router, options: [port: 4001]}
+      {Plug.Adapters.Cowboy, scheme: :http, plug: Daze.Router, options: [port: 4001]},
+      {Daze.Repo, []}
     ]
 
     opts = [strategy: :one_for_one, name: Daze.Supervisor]

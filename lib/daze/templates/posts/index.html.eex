@@ -3,6 +3,31 @@
   <head>
   </head>
   <body>
-    EEx is the <%= @adjective1 %> and the <%= @adjective2 %>!
+    <h1>Posts</h1>
+
+    <div>
+      <form action="/posts" method="post">
+        <label>Post:</label>
+        <textarea name="post"></textarea>
+
+        <label>Author</label>
+        <input type="text" name="author">
+
+        <button type="submit">Post</button>
+      </form>
+    </div>
+
+    <div>
+      <%= if @posts do  %>
+        <ul>
+          <%= for post <- @posts do %>
+            <li>
+              <%= post.body %>
+              <strong>by <%= post.author %></strong>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
   </body>
 </html>

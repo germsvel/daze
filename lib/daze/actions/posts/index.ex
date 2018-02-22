@@ -5,6 +5,8 @@ defmodule Daze.Actions.Posts.Index do
   def init(opts), do: opts
 
   def call(conn, _opts) do
-    send_resp(conn, 200, Posts.index(adjective1: "coolest", adjective2: "fastest"))
+    posts = Daze.Repo.all()
+
+    send_resp(conn, 200, Posts.index(posts: posts))
   end
 end

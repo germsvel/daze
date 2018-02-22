@@ -9,9 +9,11 @@ defmodule Daze.Router do
 
   plug(Plug.Logger)
   plug(:match)
+  plug(Plug.Parsers, parsers: [:urlencoded, :multipart])
   plug(:dispatch)
 
   get("/", to: Daze.Actions.Posts.Index)
+  post("/posts", to: Daze.Actions.Posts.Create)
 
   def handle_errors(conn, %{kind: _kind, reason: _reason, stack: _stack}) do
     conn
