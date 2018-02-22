@@ -6,14 +6,8 @@ defmodule Daze.Application do
   use Application
 
   def start(_type, _args) do
-    # List all child processes to be supervised
-    children = [
-      # Starts a worker by calling: Daze.Worker.start_link(arg)
-      # {Daze.Worker, arg},
-    ]
+    children = []
 
-    # See https://hexdocs.pm/elixir/Supervisor.html
-    # for other strategies and supported options
     opts = [strategy: :one_for_one, name: Daze.Supervisor]
     Supervisor.start_link(children, opts)
   end
