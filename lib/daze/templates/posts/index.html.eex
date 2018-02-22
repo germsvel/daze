@@ -3,6 +3,6 @@
   <head>
   </head>
   <body>
-    EEx is the <%= adjective %>!
+    EEx is the <%= @adjective1 %> and the <%= @adjective2 %>!
   </body>
 </html>
