@@ -1,8 +1,5 @@
 defmodule Daze.Views.Sessions do
-  require EEx
+  use Daze.View
 
-  EEx.function_from_file :def,
-    :new,
-    "lib/daze/templates/sessions/new.html.eex",
-    [:assigns]
+  deftemplate("sessions/new.html.eex", :new)
 end
