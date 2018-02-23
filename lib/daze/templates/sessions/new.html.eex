@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-    <h1>Sign in</h1>
+    <div class="container">
+      <div class="header">
+        <img class="banner-image" src="images/elixir-daze.svg">
 
-    <div>
-      <form action="/sessions" method="post">
-        <label>Email:</label>
-        <input type="email" name="email">
+        <h1>Sign in</h1>
+      </div>
 
-        <label>Password:</label>
-        <input type="password" name="password">
+      <div class="main">
+        <form action="/sessions" method="post">
+          <label>Email:</label>
+          <input type="email" name="email">
 
-        <button type="submit">Sign in</button>
-      </form>
+          <label>Password:</label>
+          <input type="password" name="password">
+
+          <button type="submit">Sign in</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>

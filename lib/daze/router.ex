@@ -8,6 +8,7 @@ defmodule Daze.Router do
   use Plug.ErrorHandler
 
   plug(Plug.Logger)
+  plug(Plug.Static, from: :daze, at: "/", only: ["images", "css"])
   plug(:match)
   plug(:put_secret_key_base)
   plug(Plug.Parsers, parsers: [:urlencoded, :multipart])

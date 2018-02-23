@@ -1,0 +1,46 @@
+body {
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 4em;
+}
+
+.banner-image {
+  width: 100px;
+}
+
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: auto;
+}
+
+.posts {
+  margin: 3em 0.5em;
+}
+
+.post-item {
+  margin: 0 0.5em 3em 0.5em;
+  list-style: none;
+}
+
+.post-body {
+  font-size: 1.5em;
+}
+
+.post-author {
+  margin-top: 0.3em;
+  display: block;
+  text-align: right;
+}
