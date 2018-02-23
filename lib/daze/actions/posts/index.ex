@@ -6,6 +6,8 @@ defmodule Daze.Actions.Posts.Index do
   def call(conn, _opts) do
     posts = Daze.Repo.all()
 
-    render(conn, Posts.index(posts: posts))
+    current_user_email = get_session(conn, :current_user_email)
+
+    render(conn, Posts.index(posts: posts, current_user_email: current_user_email))
   end
 end

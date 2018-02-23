@@ -6,6 +6,14 @@
     <h1>Posts</h1>
 
     <div>
+      <%= if @current_user_email do %>
+        Welcome <%= @current_user_email %>
+      <% else %>
+        <a href="/sign_in">Sign In</a>
+      <% end %>
+    </div>
+
+    <div>
       <form action="/posts" method="post">
         <label>Post:</label>
         <textarea name="post"></textarea>
