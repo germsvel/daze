@@ -8,7 +8,7 @@ defmodule Daze.View do
   @template_path "lib/daze/templates"
 
   defmacro deftemplate(template_name, function_name) do
-    template_path = "#{@template_path}/#{template_name}"
+    template_path = Path.join(@template_path, template_name)
 
     quote do
       require EEx
