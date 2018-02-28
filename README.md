@@ -1,21 +1,5 @@
 # Daze
 
-**TODO: Add description**
+A sample application for my talk in [ElixirDaze 2018](http://www.elixirdaze.com/). 
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `daze` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:daze, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/daze](https://hexdocs.pm/daze).
-
+The talk is about building your own framework in elixir. The repo starts with a new mix project, builds a very simple application, and extracts some common functionality that frameworks provide. 
